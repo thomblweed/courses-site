@@ -40,6 +40,9 @@ devDependencies:
   '@nx/playwright':
     specifier: 19.0.3
     version: 19.0.3(@playwright/test@1.44.0)(@swc-node/register@1.8.0)(@swc/core@1.3.107)(@types/node@18.16.9)(nx@19.0.3)(typescript@5.4.5)
+  '@nx/react':
+    specifier: 19.0.3
+    version: 19.0.3(@swc-node/register@1.8.0)(@swc/core@1.3.107)(@types/node@18.16.9)(nx@19.0.3)(typescript@5.4.5)(webpack@5.91.0)
   '@nx/workspace':
     specifier: 19.0.3
     version: 19.0.3(@swc-node/register@1.8.0)(@swc/core@1.3.107)
