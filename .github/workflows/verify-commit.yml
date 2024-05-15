@@ -14,9 +14,7 @@ jobs:
   main:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -28,6 +26,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
       # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: pnpm exec nx-cloud record -- echo Hello World
       - run: pnpm exec nx affected -t lint test build
       - run: pnpm exec nx affected --parallel 1 -t e2e-ci
