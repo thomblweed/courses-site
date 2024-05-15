@@ -15,13 +15,14 @@ jobs:
   main:
     runs-on: ubuntu-20.04
     steps:
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      # Cache node_modules
-      - uses: actions/setup-node@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
