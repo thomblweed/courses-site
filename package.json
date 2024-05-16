@@ -46,7 +46,6 @@
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "happy-dom": "~9.20.3",
-    "jest-environment-jsdom": "^29.4.1",
     "nx": "19.0.3",
     "prettier": "^2.6.2",
     "sass": "1.62.1",
