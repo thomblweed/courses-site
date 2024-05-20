@@ -6,6 +6,9 @@ on:
       - 'main'
   pull_request:
 
+env:
+  NODE_VERSION: 20.13.1
+
 permissions:
   actions: read
   contents: read
@@ -18,10 +21,10 @@ jobs:
       - uses: pnpm/action-setup@v2
         with:
           version: 8
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js $NODE_VERSION
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: $NODE_VERSION
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4

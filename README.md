@@ -8,34 +8,32 @@
 
 This repo uses [pnpm](https://pnpm.io/) as the package manager. To install dependencies, run `pnpm install`.
 
-To install Nx globally, run `pnpm add --global nx@latest`.
-
 ## Start the application
 
-Run `nx dev courses-site` to start the development server. Happy coding!
+Run `pnpx nx dev courses-site` to start the development server. Happy coding!
 
 ## Build for production
 
-Run `nx build courses-site` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
+Run `pnpx nx build courses-site` to build the application. The build artifacts are stored in the output directory (e.g. `dist/` or `build/`), ready to be deployed.
 
 ## Running tasks
 
 To execute tasks with Nx use the following syntax:
 
 ```
-nx <target> <project> <...options>
+pnpx nx <target> <project> <...options>
 ```
 
 You can also run multiple targets:
 
 ```
-nx run-many -t <target1> <target2>
+pnpx nx run-many -t <target1> <target2>
 ```
 
 ..or add `-p` to filter specific projects
 
 ```
-nx run-many -t <target1> <target2> -p <proj1> <proj2>
+pnpx nx run-many -t <target1> <target2> -p <proj1> <proj2>
 ```
 
 Targets can be defined in the `package.json` or `projects.json`. Learn more [in the docs](https://nx.dev/features/run-tasks).
@@ -50,7 +48,7 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 
 ## Explore the project graph
 
-Run `nx graph` to show the graph of the workspace.
+Run `pnpx nx graph` to show the graph of the workspace.
 It will show tasks that you can run with Nx.
 
 - [Learn more about Exploring the Project Graph](https://nx.dev/core-features/explore-graph)

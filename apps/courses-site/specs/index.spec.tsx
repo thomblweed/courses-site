@@ -7,8 +7,6 @@ describe('Page', () => {
   it('should render heading', () => {
     render(<Page />);
 
-    expect(
-      screen.getByRole('heading', { name: 'Courses' })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Courses' })).toBeVisible();
   });
 });
