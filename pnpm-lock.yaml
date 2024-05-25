@@ -125,8 +125,8 @@ devDependencies:
     specifier: 4.6.0
     version: 4.6.0(eslint@8.57.0)
   happy-dom:
-    specifier: ~9.20.3
-    version: 9.20.3
+    specifier: ^14.11.0
+    version: 14.11.0
   nx:
     specifier: 19.1.0
     version: 19.1.0(@swc-node/register@1.8.0)(@swc/core@1.3.107)
@@ -156,7 +156,7 @@ devDependencies:
     version: 5.0.13(@types/node@18.16.9)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
   vitest:
     specifier: ^1.3.1
-    version: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
+    version: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
 
 packages:
 
@@ -2594,7 +2594,7 @@ packages:
       enquirer: 2.3.6
       tsconfig-paths: 4.2.0
       vite: 5.0.13(@types/node@18.16.9)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
-      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
+      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -3252,7 +3252,7 @@ packages:
       dom-accessibility-api: 0.6.3
       lodash: 4.17.21
       redent: 3.0.0
-      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
+      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
     dev: true
 
   /@testing-library/react@15.0.7(@types/react@18.3.1)(react-dom@18.3.1)(react@18.3.1):
@@ -3766,7 +3766,7 @@ packages:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
+      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3813,7 +3813,7 @@ packages:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
+      vitest: 1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0)
     dev: true
 
   /@vitest/utils@1.6.0:
@@ -6520,14 +6520,12 @@ packages:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
     dev: true
 
-  /happy-dom@9.20.3:
-    resolution: {integrity: sha512-eBsgauT435fXFvQDNcmm5QbGtYzxEzOaX35Ia+h6yP/wwa4xSWZh1CfP+mGby8Hk6Xu59mTkpyf72rUXHNxY7A==}
+  /happy-dom@14.11.0:
+    resolution: {integrity: sha512-vu25dY7YJqLuTG/3ADC0FZRRF0yNBp3q2K0YTN08opXdZi8V/YzIJDNJWFiCnDIuyc+RrCIE093+H5fa9Trlxg==}
+    engines: {node: '>=16.0.0'}
     dependencies:
-      css.escape: 1.5.1
       entities: 4.5.0
-      iconv-lite: 0.6.3
       webidl-conversions: 7.0.0
-      whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
     dev: true
 
@@ -10349,7 +10347,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@9.20.3)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0):
+  /vitest@1.6.0(@types/node@18.16.9)(@vitest/ui@1.6.0)(happy-dom@14.11.0)(less@4.1.3)(sass@1.62.1)(stylus@0.59.0):
     resolution: {integrity: sha512-H5r/dN06swuFnzNFhq/dnz37bPXnq8xB2xB5JOVk8K09rUtoeNN+LHWkoQ0A/i3hvbUKKcCei9KpbxqHMLhLLA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -10385,7 +10383,7 @@ packages:
       chai: 4.4.1
       debug: 4.3.4
       execa: 8.0.1
-      happy-dom: 9.20.3
+      happy-dom: 14.11.0
       local-pkg: 0.5.0
       magic-string: 0.30.10
       pathe: 1.1.2

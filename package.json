@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx run-many -t dev",
-    "test": "nx run-many -t test"
+    "dev": "nx dev courses-site",
+    "test": "nx test courses-site"
   },
   "private": true,
   "dependencies": {
@@ -49,7 +49,7 @@
     "eslint-plugin-playwright": "^0.15.3",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "happy-dom": "~9.20.3",
+    "happy-dom": "^14.11.0",
     "nx": "19.1.0",
     "nx-stylelint": "^17.1.4",
     "prettier": "^2.6.2",

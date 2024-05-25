@@ -1,7 +1,7 @@
 import { auth, signIn, signOut } from '@/services/auth';
 import styles from './page.module.scss';
 
-export default async function Index() {
+export default async function HomePage() {
   const session = await auth();
 
   return (
