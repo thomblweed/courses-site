@@ -1,0 +1,28 @@
+name: Verify Commit
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  main:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.15.7
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.13.1
+          cache: 'pnpm'
+      - run: pnpm install --frozen-lockfile
+      - uses: nrwl/nx-set-shas@v4
+      - run: pnpm exec nx affected -t lint stylelint test build
+      - run: pnpm exec nx affected --parallel 1 -t e2e-ci
