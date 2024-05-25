@@ -24,5 +24,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
-      - run: pnpm exec nx affected -t lint stylelint test build
+      - run: pnpm exec nx affected -t lint stylelint
+      - run: pnpm exec nx run-many -t build
+      - run: pnpm exec nx run-many -t test
       - run: pnpm exec nx affected --parallel 1 -t e2e-ci

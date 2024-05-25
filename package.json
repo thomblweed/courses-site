@@ -2,7 +2,10 @@
   "name": "courses-site",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run-many -t dev",
+    "test": "nx run-many -t test"
+  },
   "private": true,
   "dependencies": {
     "next": "14.0.4",
