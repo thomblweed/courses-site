@@ -17,14 +17,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
         with:
-          version: 9.1.2
+          version: 8.15.8
       - uses: actions/setup-node@v3
         with:
           node-version: 20.13.1
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
-      - run: pnpm exec nx affected -t lint stylelint
+      - run: pnpm exec nx affected --parallel -t lint stylelint
       - run: pnpm exec nx run-many -t build
       - run: pnpm exec nx run-many -t test
       - run: pnpm exec nx affected --parallel 1 -t e2e-ci
