@@ -24,8 +24,9 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - uses: nrwl/nx-set-shas@v4
+      - run: pnpm exec nx affected --parallel -t lint stylelint
+      - name: Build
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-      - run: pnpm exec nx affected --parallel -t lint stylelint
-      - run: pnpm exec nx build courses-site
+        run: pnpm exec nx build courses-site
       - run: pnpm exec nx test courses-site
