@@ -1,3 +1,4 @@
+import { sendEmail } from '@/features/email/actions/sendEmail';
 import { auth, signIn, signOut } from '@/services/auth';
 import styles from './page.module.scss';
 
@@ -21,14 +22,7 @@ export default async function HomePage() {
               >
                 <button type="submit">Sign Out</button>
               </form>
-              <form
-                action={async () => {
-                  'use server';
-                  await fetch('http://localhost:3000/api/send', {
-                    method: 'POST',
-                  });
-                }}
-              >
+              <form action={sendEmail}>
                 <button type="submit">Send Email</button>
               </form>
             </div>
