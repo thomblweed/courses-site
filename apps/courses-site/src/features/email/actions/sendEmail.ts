@@ -3,8 +3,7 @@ import { Resend } from 'resend';
 
 import { EmailTemplate } from '../components/EmailTemplate';
 
-const API_KEY = process.env.RESEND_API_KEY || 'temp-build-fix-value';
-const resend = new Resend(API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const errorResponse = (error: unknown) => ({ error });
 
