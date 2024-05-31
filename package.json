@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nx dev courses-site",
     "test": "nx test courses-site",
-    "update-deps": "nx migrate latest"
+    "update-deps": "nx migrate latest",
+    "run-migrations": "nx migrate --run-migrations"
   },
   "private": true,
   "dependencies": {
