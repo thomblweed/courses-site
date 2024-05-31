@@ -32,6 +32,20 @@ describe('When auth returns a session', () => {
 
     expect(screen.getByText('Hi Jeff')).toBeVisible();
   });
+
+  it('should display send email button', async () => {
+    const homePageJsx = await HomePage();
+    render(homePageJsx);
+
+    expect(screen.getByRole('button', { name: 'Send Email' })).toBeVisible();
+  });
+
+  it('should display sign out button', async () => {
+    const homePageJsx = await HomePage();
+    render(homePageJsx);
+
+    expect(screen.getByRole('button', { name: 'Sign Out' })).toBeVisible();
+  });
 });
 
 describe('When auth returns null', () => {
