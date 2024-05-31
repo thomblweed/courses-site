@@ -13,7 +13,7 @@ export async function POST() {
       // currently only works with @resend.dev, presumably free tier constraint
       from: 'Courses <onboarding@resend.dev>',
       // works with my email in the "to" property
-      to: ['test@testing.com'],
+      to: ['delivered@resend.dev'],
       subject: 'Courses Registration Confirmation',
       react: EmailTemplate({ firstName: 'Jeff' }),
     });
