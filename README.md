@@ -10,7 +10,7 @@ This repo uses [pnpm](https://pnpm.io/) as the package manager. To install depen
 
 ## Start the application
 
-Run `pnpx nx dev courses-site` to start the development server. Happy coding!
+Run `pnpm dev` to start the development server. Happy coding!
 
 ## Build for production
 
