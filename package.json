@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "nx dev courses-site",
     "test": "nx test courses-site",
+    "lint": "nx affected --parallel -t lint stylelint",
     "update-deps": "nx migrate latest",
     "run-migrations": "nx migrate --run-migrations"
   },
@@ -57,8 +58,8 @@
     "nx-stylelint": "^17.1.4",
     "prettier": "^2.6.2",
     "sass": "1.62.1",
-    "stylelint": "^15.0.0",
-    "stylelint-config-standard": "^34.0.0",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.0",
     "ts-node": "10.9.1",
     "typescript": "~5.4.2",
     "vite": "~5.0.0",
