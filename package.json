@@ -6,7 +6,7 @@
     "dev": "nx dev courses-site",
     "test": "nx test courses-site",
     "lint": "nx affected --parallel -t lint stylelint",
-    "update-deps": "nx migrate latest",
+    "migrate": "nx migrate latest",
     "run-migrations": "nx migrate --run-migrations"
   },
   "private": true,
@@ -26,7 +26,7 @@
     "@nx/next": "19.1.1",
     "@nx/playwright": "19.1.1",
     "@nx/react": "19.1.1",
-    "@nx/vite": "^19.1.1",
+    "@nx/vite": "19.1.1",
     "@nx/web": "19.1.1",
     "@nx/workspace": "19.1.1",
     "@playwright/test": "^1.36.0",
