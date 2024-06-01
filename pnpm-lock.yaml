@@ -49,7 +49,7 @@ importers:
         specifier: 19.1.1
         version: 19.1.1(@swc-node/register@1.9.1)(@swc/core@1.5.24)(@types/node@18.16.9)(eslint@8.57.0)(nx@19.1.1)(typescript@5.4.5)(webpack@5.91.0)
       '@nx/vite':
-        specifier: ^19.1.1
+        specifier: 19.1.1
         version: 19.1.1(@swc-node/register@1.9.1)(@swc/core@1.5.24)(@types/node@18.16.9)(nx@19.1.1)(typescript@5.4.5)(vite@5.0.13)(vitest@1.6.0)
       '@nx/web':
         specifier: 19.1.1
