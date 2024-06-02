@@ -9,7 +9,8 @@
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/courses-site/**/*.css"]
+        "lintFilePatterns": ["apps/courses-site/**/*.css"],
+        "fix": true
       }
     }
   }
