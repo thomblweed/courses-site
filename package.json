@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nx run-many -t dev",
+    "build": "nx run-many -t build",
     "test": "nx run-many -t test",
     "lint": "nx affected --parallel -t lint stylelint",
     "migrate": "nx migrate latest",
