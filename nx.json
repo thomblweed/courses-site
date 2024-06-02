@@ -55,6 +55,9 @@
         "style": "scss",
         "linter": "eslint"
       }
+    },
+    "@nx/react": {
+      "library": {}
     }
   },
   "targetDefaults": {
@@ -64,6 +67,11 @@
         "{workspaceRoot}/.stylelintrc(.(json|yml|yaml|js))?"
       ],
       "cache": true
+    },
+    "@nx/js:swc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     }
   }
 }
