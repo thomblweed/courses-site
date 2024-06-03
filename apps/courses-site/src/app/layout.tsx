@@ -1,4 +1,4 @@
-import './reset.css';
+import './global.css';
 
 export const metadata = {
   title: 'Welcome to Courses',

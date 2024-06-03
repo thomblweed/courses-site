@@ -4,7 +4,9 @@
     {
       "files": ["**/*.css"],
       "extends": ["stylelint-config-standard"],
-      "rules": {}
+      "rules": {
+        "import-notation": "string"
+      }
     }
   ],
   "rules": {}

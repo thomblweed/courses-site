@@ -1,12 +1,13 @@
+import { Button } from '@ui-kit/ui';
+
 import { sendEmail } from '@/features/email/actions/sendEmail';
 import { auth, signIn, signOut } from '@/services/auth';
-import styles from './page.module.scss';
 
 export default async function HomePage() {
   const session = await auth();
 
   return (
-    <div className={styles.page}>
+    <div>
       <h1>Courses</h1>
       {
         // temp poc code just prove out auth and email features
@@ -20,10 +21,10 @@ export default async function HomePage() {
                   await signOut();
                 }}
               >
-                <button type="submit">Sign Out</button>
+                <Button type="submit">Sign Out</Button>
               </form>
               <form action={sendEmail}>
-                <button type="submit">Send Email</button>
+                <Button type="submit">Send Email</Button>
               </form>
             </div>
           </>
@@ -35,7 +36,7 @@ export default async function HomePage() {
                 await signIn();
               }}
             >
-              <button type="submit">Sign In</button>
+              <Button type="submit">Sign In</Button>
             </form>
           </div>
         )

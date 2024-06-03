@@ -19,7 +19,11 @@
     "types": ["jest", "node"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@ui-kit/ui": ["../../libs/ui-kit/ui/src/index.ts"],
+      "@ui-kit/ui/*": ["../../libs/ui-kit/ui/src/*"],
+      "@ui-kit/util": ["../../libs/ui-kit/util/src/index.ts"],
+      "@ui-kit/util/*": ["../../libs/ui-kit/util/src/*"]
     }
   },
   "include": [
