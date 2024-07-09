@@ -6,7 +6,7 @@
     "dev": "nx run-many -t dev",
     "build": "nx run-many -t build --output-style=static",
     "test": "nx test courses-site",
-    "lint": "nx affected --parallel -t lint stylelint",
+    "lint": "nx run-many --parallel -t lint stylelint",
     "migrate": "nx migrate latest",
     "run-migrations": "nx migrate --run-migrations"
   },
