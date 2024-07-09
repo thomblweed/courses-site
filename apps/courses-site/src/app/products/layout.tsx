@@ -7,7 +7,7 @@ type ProductsLayoutProps = {
 export default function ProductsLayout({ children }: ProductsLayoutProps) {
   return (
     <>
-      <div>Products Layout</div>
+      <h1>Products Layout</h1>
       <section>{children}</section>
     </>
   );
