@@ -45,5 +45,5 @@ to the ui library at the [this location](./libs/ui-kit/ui/src/lib/ui/). Once
 generated, ensure to export the component from the
 [index.ts](./libs/ui-kit/ui/src/index.ts) file.
 
-This ui library setup was able to be done by some great help from
+This ui library setup was completed with help from
 [this article](https://blog.patrickvaler.ch/how-to-get-started-with-shadcn-ui-and-next-js-within-a-nx-monorepo-57908f48b4ef).
