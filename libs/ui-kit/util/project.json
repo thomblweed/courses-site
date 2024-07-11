@@ -14,6 +14,13 @@
         "tsConfig": "libs/ui-kit/util/tsconfig.lib.json",
         "assets": ["libs/ui-kit/util/*.md"]
       }
+    },
+
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "config": "libs/ui-kit/util/vite.config.ts"
+      }
     }
   }
 }

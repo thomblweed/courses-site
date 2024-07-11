@@ -12,6 +12,12 @@
         "lintFilePatterns": ["apps/courses-site/**/*.css"],
         "fix": true
       }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "config": "apps/courses-site/vite.config.ts"
+      }
     }
   }
 }
