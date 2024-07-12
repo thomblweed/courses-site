@@ -1,6 +1,7 @@
+import { Button } from '@ui-kit/ui';
+
 import { sendEmail } from '@/features/email/actions/sendEmail';
 import { auth, signIn, signOut } from '@/services/auth';
-import { Button } from '@ui-kit/ui';
 
 export default async function HomePage() {
   const session = await auth();

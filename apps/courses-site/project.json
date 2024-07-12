@@ -5,6 +5,17 @@
   "projectType": "application",
   "tags": [],
   "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/courses-site/**/*.tsx",
+          "apps/courses-site/**/*.ts"
+        ],
+        "fix": true
+      }
+    },
     "stylelint": {
       "executor": "nx-stylelint:lint",
       "outputs": ["{options.outputFile}"],

@@ -1,4 +1,5 @@
 import { ClassValue } from 'clsx';
+
 import { cn } from './cn';
 
 it('should return correctly concatinated values', () => {

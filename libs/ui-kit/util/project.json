@@ -15,7 +15,17 @@
         "assets": ["libs/ui-kit/util/*.md"]
       }
     },
-
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ui-kit/util/**/*.tsx",
+          "libs/ui-kit/util/**/*.ts"
+        ],
+        "fix": true
+      }
+    },
     "test": {
       "executor": "@nx/vite:test",
       "options": {
