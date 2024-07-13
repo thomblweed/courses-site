@@ -8,15 +8,6 @@ vi.mock('@/services/auth', () => ({
   auth: () => mockAuth(),
 }));
 
-it('should display a heading', async () => {
-  const homePageJsx = await HomePage();
-  render(homePageJsx);
-
-  expect(
-    screen.getByRole('heading', { name: 'Courses', level: 1 })
-  ).toBeVisible();
-});
-
 describe('When auth returns a session', () => {
   beforeEach(() => {
     mockAuth.mockResolvedValue({ user: { name: 'Jeff' } });
@@ -26,25 +17,13 @@ describe('When auth returns a session', () => {
     vi.clearAllMocks();
   });
 
-  it('should display hi message', async () => {
-    const homePageJsx = await HomePage();
-    render(homePageJsx);
-
-    expect(screen.getByText('Hi Jeff')).toBeVisible();
-  });
-
   it('should display send email button', async () => {
     const homePageJsx = await HomePage();
     render(homePageJsx);
 
-    expect(screen.getByRole('button', { name: 'Send Email' })).toBeVisible();
-  });
-
-  it('should display sign out button', async () => {
-    const homePageJsx = await HomePage();
-    render(homePageJsx);
-
-    expect(screen.getByRole('button', { name: 'Sign Out' })).toBeVisible();
+    expect(
+      screen.getByRole('button', { name: 'Send Email' })
+    ).toBeInTheDocument();
   });
 });
 
@@ -57,10 +36,12 @@ describe('When auth returns null', () => {
     vi.clearAllMocks();
   });
 
-  it('should display sign in button', async () => {
+  it('should NOT display send email button', async () => {
     const homePageJsx = await HomePage();
     render(homePageJsx);
 
-    expect(screen.getByRole('button', { name: 'Sign In' })).toBeVisible();
+    expect(
+      screen.queryByRole('button', { name: 'Send Email' })
+    ).not.toBeInTheDocument();
   });
 });

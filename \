@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react';
 
 import { Navigation } from '@/features/navigation';
-import { UserSession } from '@/features/user-session';
 import './global.css';
+import { Session } from '@/features/session';
 
 export const metadata = {
   title: 'Welcome to Courses',
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <header className="flex">
           <Navigation />
-          <UserSession />
+          <Session />
         </header>
         <main>{children}</main>
       </body>
