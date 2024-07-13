@@ -5,7 +5,6 @@ import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
-
 export default defineConfig({
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/courses-site',
@@ -13,7 +12,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'happy-dom',
-    include: ['specs/**/*.{test,spec}.{ts,tsx}'],
+    include: ['./**/*.{test,spec}.{ts,tsx}'],
     setupFiles: './tests/setup.ts',
     reporters: ['default'],
     coverage: {
