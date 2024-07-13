@@ -5,5 +5,17 @@
   "tags": [],
   "implicitDependencies": ["courses-site"],
   "// targets": "to see all targets run: nx show project courses-site-e2e --web",
-  "targets": {}
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/courses-site-e2e/**/*.tsx",
+          "apps/courses-site-e2e/**/*.ts"
+        ],
+        "fix": true
+      }
+    }
+  }
 }
