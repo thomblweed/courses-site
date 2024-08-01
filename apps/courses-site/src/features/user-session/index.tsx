@@ -6,7 +6,7 @@ export const UserSession = async () => {
   const { buttonText, action, userName } = await useUserSessionProps();
 
   return (
-    <div className="flex">
+    <div className="flex items-center gap-2">
       {userName ? <div>Hi {userName}</div> : null}
       <form action={action}>
         <Button type="submit">{buttonText}</Button>
