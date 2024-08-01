@@ -13,11 +13,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <header className="flex">
-          <Navigation />
-          <UserSession />
-        </header>
-        <main>{children}</main>
+        <div className="grid grid-rows-layout h-dvh container mx-auto">
+          <header className="flex justify-between items-center px-4">
+            <div>Courses</div>
+            <div className="flex">
+              <Navigation />
+              <UserSession />
+            </div>
+          </header>
+          <main className="px-4">{children}</main>
+          <footer className="px-4">Footer</footer>
+        </div>
       </body>
     </html>
   );
