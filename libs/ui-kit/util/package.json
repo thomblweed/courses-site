@@ -4,11 +4,5 @@
   "type": "commonjs",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
-  "private": true,
-  "dependencies": {
-    "@swc/helpers": "~0.5.11",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
-  }
+  "private": true
 }
