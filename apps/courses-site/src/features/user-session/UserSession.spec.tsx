@@ -34,6 +34,19 @@ describe('When auth returns a session', () => {
   });
 });
 
+describe('When auth returns a user with no properties', async () => {
+  beforeEach(() => {
+    mockAuth.mockResolvedValue({ user: {} });
+  });
+
+  it('should NOT display hi message', async () => {
+    const userSessionJsx = await UserSession();
+    render(userSessionJsx);
+
+    expect(screen.queryByText('Hi')).not.toBeInTheDocument();
+  });
+});
+
 describe('When auth returns null', () => {
   beforeEach(() => {
     mockAuth.mockResolvedValue(null);
