@@ -1,16 +1,23 @@
 import { Button } from '@ui-kit/ui';
 
-import { useUserSessionProps } from './hooks/useUserSessionProps';
+import { auth } from '@/services/auth';
+
+import { signInUser } from './actions/signInUser';
+import { UserMenu } from './components/user/Menu';
 
 export const UserSession = async () => {
-  const { buttonText, action, userName } = await useUserSessionProps();
+  const session = await auth();
+  const hasSession = !!session?.user;
 
   return (
-    <div className="flex items-center gap-4">
-      {userName ? <div>Hi {userName}</div> : null}
-      <form action={action}>
-        <Button type="submit">{buttonText}</Button>
-      </form>
+    <div>
+      {hasSession ? (
+        <UserMenu username={session.user?.name ?? session.user?.email} />
+      ) : (
+        <form action={signInUser}>
+          <Button type="submit">Sign in</Button>
+        </form>
+      )}
     </div>
   );
 };
