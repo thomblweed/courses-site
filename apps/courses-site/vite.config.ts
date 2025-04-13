@@ -4,8 +4,9 @@ import path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import type { ViteUserConfig } from 'vitest/config';
 
-export default defineConfig({
+const config: ViteUserConfig = {
   root: __dirname,
   cacheDir: '../../node_modules/.vite/apps/courses-site',
   plugins: [react(), nxViteTsPaths()],
@@ -25,4 +26,6 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-});
+};
+
+export default defineConfig(config);

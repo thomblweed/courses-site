@@ -39,11 +39,13 @@ you can run with Nx.
 This project utilises [Shadcn](https://ui.shadcn.com/) for generating local
 components in the [ui library](./libs/ui-kit/ui/).
 
-To generate a component, run the command `pnpx shadcn-ui@latest add [component]`
-as documented [here](https://ui.shadcn.com/docs/cli). This will add a component
-to the ui library at the [this location](./libs/ui-kit/ui/src/lib/ui/). Once
+To generate a component, run the command `pnpx shadcn@latest add [component]` as
+documented [here](https://ui.shadcn.com/docs/cli). This will add a component to
+the ui library at the [this location](./libs/ui-kit/ui/src/lib/ui/). Once
 generated, ensure to export the component from the
 [index.ts](./libs/ui-kit/ui/src/index.ts) file.
 
 This ui library setup was completed with help from
 [this article](https://blog.patrickvaler.ch/how-to-get-started-with-shadcn-ui-and-next-js-within-a-nx-monorepo-57908f48b4ef).
+
+To update the Shadcn components, run `pnpm update-ui-kit`

@@ -17,19 +17,12 @@ describe('When auth returns a session', () => {
     vi.clearAllMocks();
   });
 
-  it('should display hi message', async () => {
-    const userSessionJsx = await UserSession();
-    render(userSessionJsx);
-
-    expect(screen.getByText('Hi Jeff')).toBeInTheDocument();
-  });
-
-  it('should display sign out button', async () => {
+  it('should display user menu', async () => {
     const userSessionJsx = await UserSession();
     render(userSessionJsx);
 
     expect(
-      screen.getByRole('button', { name: 'Sign Out' })
+      screen.getByRole('button', { name: 'Your details' })
     ).toBeInTheDocument();
   });
 });
@@ -60,7 +53,7 @@ describe('When auth returns null', () => {
     const userSessionJsx = await UserSession();
     render(userSessionJsx);
 
-    expect(screen.getByRole('button', { name: 'Sign In' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Sign in' })).toBeInTheDocument();
   });
 
   it('should NOT display hi message', async () => {

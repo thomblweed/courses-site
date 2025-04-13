@@ -2,9 +2,10 @@ import { type ComponentPropsWithoutRef } from 'react';
 
 import { Navigation } from '@/features/navigation';
 import { UserSession } from '@/features/user-session';
-import { ThemeProvider } from '@/providers/theme';
-import './global.css';
 import { ToggleTheme } from '@/features/theme/components/ToggleTheme';
+import { ThemeProvider } from '@/providers/theme';
+
+import './global.css';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface RootLayoutProps extends ComponentPropsWithoutRef<'html'> {}
@@ -30,8 +31,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <div>Courses</div>
                 <div className="flex gap-4">
                   <Navigation />
-                  <ToggleTheme />
                   <UserSession />
+                  <ToggleTheme />
                 </div>
               </header>
               <main>{children}</main>
