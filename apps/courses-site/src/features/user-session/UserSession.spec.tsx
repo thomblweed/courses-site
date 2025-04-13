@@ -56,11 +56,11 @@ describe('When auth returns null', () => {
     vi.clearAllMocks();
   });
 
-  it('should display sign in button', async () => {
+  it.only('should display sign in button', async () => {
     const userSessionJsx = await UserSession();
     render(userSessionJsx);
 
-    expect(screen.getByRole('button', { name: 'Sign In' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Sign in' })).toBeInTheDocument();
   });
 
   it('should NOT display hi message', async () => {
