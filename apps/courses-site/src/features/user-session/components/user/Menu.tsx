@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@ui-kit/ui';
 import { CreditCard, Settings, User } from 'lucide-react';
+import Link from 'next/link';
 
 import { signOutUser } from '../../actions/signOutUser';
 
@@ -26,10 +27,12 @@ export const UserMenu = ({ username }: MenuProps) => {
         {username ? <DropdownMenuLabel>{username}</DropdownMenuLabel> : null}
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            <User className="mr-2 h-4 w-4" />
-            <span>Profile</span>
-          </DropdownMenuItem>
+          <Link href="/profile">
+            <DropdownMenuItem>
+              <User className="mr-2 h-4 w-4" />
+              <span>Profile</span>
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem>
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Billing</span>
