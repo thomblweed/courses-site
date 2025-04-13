@@ -1,8 +1,8 @@
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { defineConfig } from 'vite';
+import type { ViteUserConfig } from 'vitest/config';
 
-
-export default defineConfig({
+const config: ViteUserConfig = {
   root: __dirname,
   cacheDir: '../../../node_modules/.vite/libs/ui-kit/util',
 
@@ -15,7 +15,6 @@ export default defineConfig({
 
   test: {
     globals: true,
-    cache: { dir: '../../../node_modules/.vitest/libs/ui-kit/util' },
     environment: 'node',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     reporters: ['default'],
@@ -24,4 +23,6 @@ export default defineConfig({
       provider: 'v8',
     },
   },
-});
+};
+
+export default defineConfig(config);
