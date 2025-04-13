@@ -47,3 +47,5 @@ generated, ensure to export the component from the
 
 This ui library setup was completed with help from
 [this article](https://blog.patrickvaler.ch/how-to-get-started-with-shadcn-ui-and-next-js-within-a-nx-monorepo-57908f48b4ef).
+
+To update the Shadcn components, run `pnpm update-ui-kit`
